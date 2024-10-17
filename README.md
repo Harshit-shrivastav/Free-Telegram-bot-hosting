@@ -21,20 +21,21 @@ If this guide helps you, please consider following me on [GitHub](https://github
    - **✉️ Email Address**
    - **🔑 Username**
    - **🔒 Password**
-   
-3. Verify your email by clicking the link in the confirmation email sent to your inbox.
+   - **🤒 Other important informations**
+     
+3. You will receive login and SSH information on your email Account. 
 
 #### 1.3 🏗️ Choose a Free Hosting Plan
 
-1. Log in to the **Serv00 dashboard** after verifying your account.
-2. Choose the **Free Hosting Plan**.
-3. Once activated, you’ll have access to your **hosting dashboard** where you can set up your bot.
+1. Log in to the **Serv00 dashboard** using account information recieved on your email.
+
+2. After login, you’ll have access to your **hosting dashboard** where you can host websites.
 
 ---
 
 ### 🔐 Step 2: Retrieve SSH Access Credentials
 
-1. In your Serv00 dashboard, go to the **Server Information** section.
+1. In your email inbox , go to the **Server Information** section.
 2. Find the following important details:
    - **🌐 Hostname** or **IP Address**
    - **👤 SSH Username**
