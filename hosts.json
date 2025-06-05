@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Serv00",
+    "url": "https://serv00.com",
+    "status": "working",
+    "remark": "Offers shell access; can run Python, Ruby, Perl, Java, TCL/TK, Lua, Erlang, Rust, Go, C, C++, D, R bots using screen or tmux; 3GB ssd, 512MB RAM"
+  },
+  {
+    "name": "Lade.io",
+    "url": "https://lade.io",
+    "status": "not_working",
+    "remark": "Free tier seems discontinued or inactive"
+  },
+  {
+    "name": "Alwaysdata",
+    "url": "https://www.alwaysdata.com/",
+    "status": "working",
+    "remark": "100 MB storage with MySQL, PostgreSQL, CouchDB, MongoDB, PHP, Python, Ruby, Node.js, Elixir, Java, Deno, custom web servers, access via FTP, WebDAV and SSH"
+  },
+    {
+    "name": "Claw.Cloud",
+    "url": "https://ap-southeast-1.run.claw.cloud/signin",
+    "status": "working",
+    "remark": "$5/month free credits for users with a GitHub account older than 180 days."
+    }
+]
