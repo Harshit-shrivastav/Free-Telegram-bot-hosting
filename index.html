@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ Free Telegram Bot Hosting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+      :root {
+        --primary-gradient: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+        --secondary-gradient: linear-gradient(135deg, #a777e3 0%, #f36265 100%);
+        --dark-bg: #1a1a2e;
+        --darker-bg: #16213e;
+        --accent-color: #6e8efb;
+        --accent-hover: #5a7bf0;
+        --text-primary: #ffffff;
+        --text-secondary: #e2e2e2;
+        --card-bg: rgba(255, 255, 255, 0.05);
+        --highlight: rgba(110, 142, 251, 0.15);
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        --border-radius: 12px;
+        --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--dark-bg);
+        background-image: radial-gradient(circle at 25% 25%, rgba(110, 142, 251, 0.1) 0%, transparent 50%),
+                          radial-gradient(circle at 75% 75%, rgba(167, 119, 227, 0.1) 0%, transparent 50%);
+        font-family: 'Poppins', sans-serif;
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      #app {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .markdown-section {
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: var(--shadow);
+      }
+
+      .markdown-section h1, 
+      .markdown-section h2, 
+      .markdown-section h3, 
+      .markdown-section h4, 
+      .markdown-section h5, 
+      .markdown-section h6 {
+        color: var(--text-primary);
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .markdown-section h1 {
+        font-size: 2.5rem;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding-bottom: 0.5rem;
+      }
+
+      .markdown-section h2 {
+        font-size: 1.8rem;
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 0.3rem;
+      }
+
+      .markdown-section a {
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .markdown-section a:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+      }
+
+      .markdown-section code {
+        font-family: 'JetBrains Mono', monospace;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        padding: 0.2rem 0.4rem;
+      }
+
+      .markdown-section pre {
+        background: var(--darker-bg);
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        overflow-x: auto;
+      }
+
+      .markdown-section pre code {
+        background: transparent;
+        padding: 0;
+      }
+
+      /* Header Styles */
+      .app-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .app-name {
+        font-size: 3.5rem;
+        font-weight: 700;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+        display: inline-block;
+        animation: fadeInDown 1s both;
+      }
+
+      .app-tagline {
+        font-size: 1.2rem;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        animation: fadeIn 1s both 0.3s;
+      }
+
+      /* Navigation */
+      .sidebar {
+        background: var(--darker-bg) !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .sidebar-nav {
+        padding: 1rem;
+      }
+
+      .sidebar ul li a {
+        color: var(--text-secondary) !important;
+        transition: var(--transition);
+      }
+
+      .sidebar ul li a:hover {
+        color: var(--accent-color) !important;
+      }
+
+      .sidebar ul li.active > a {
+        color: var(--accent-color) !important;
+        font-weight: 500;
+      }
+
+      .app-nav {
+        display: none;
+      }
+
+      .cta-section {
+        text-align: center;
+        padding: 3rem 0;
+        background: var(--darker-bg);
+        border-radius: var(--border-radius);
+        margin: 3rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(110, 142, 251, 0.1) 0%, transparent 70%);
+        animation: pulse 15s infinite linear;
+        z-index: 0;
+      }
+
+      .cta-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        background: var(--secondary-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background: var(--primary-gradient);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        text-decoration: none;
+        margin-top: 1rem;
+        box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(110, 142, 251, 0.6);
+      }
+
+      /* Footer */
+      .app-footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+
+      @keyframes pulse {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .floating {
+        animation: floating 6s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+      }
+
+      @media (max-width: 768px) {
+        .app-name {
+          font-size: 2.5rem;
+        }
+        
+        .sidebar {
+          width: 250px;
+        }
+        
+        .markdown-section {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <h1 class="app-name floating">Free Telegram Bots hosting</h1>
+        <p class="app-tagline">List of some website that offer free hosting services for your Telegram bots.</p>
+      </header>
+      
+      <div class="cta-section">
+        <div class="cta-content">
+          <h2 class="cta-title">Free Telegram Bot Hosting</h2>
+          <a href="#get-started" class="cta-button">Check List</a>
+        </div>
+      </div>
+
+      <footer class="app-footer">
+        <p>© 2025 Free Telegram Bot Hosting</p>
+      </footer>
+    </div>
+
+    <script>
+      window.$docsify = {
+        name: 'Free Telegram Bot Hosting',
+        repo: 'https://github.com/Harshit-shrivastav/Free-Telegram-bot-hosting',
+        loadSidebar: true,
+        subMaxLevel: 2,
+        autoHeader: true,
+        themeColor: '#6e8efb',
+        search: {
+          paths: 'auto',
+          placeholder: 'Search documentation...',
+          noData: 'No results found!',
+          depth: 3
+        },
+        plugins: [
+          function(hook, vm) {
+            hook.beforeEach(function(content) {
+              return '<!-- Docsify v4 -->\n\n' + content;
+            });
+            
+            hook.doneEach(function() {
+              const headers = document.querySelectorAll('.markdown-section h2, .markdown-section h3');
+              headers.forEach((header, index) => {
+                header.classList.add('animate__animated', 'animate__fadeIn');
+                header.style.animationDelay = `${index * 0.1}s`;
+              });
+            });
+          }
+        ]
+      };
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const cta = document.querySelector('.cta-section');
+        let floating = false;
+        
+        cta.addEventListener('mouseenter', function() {
+          if (!floating) {
+            this.classList.add('floating');
+            floating = true;
+            setTimeout(() => {
+              this.classList.remove('floating');
+              floating = false;
+            }, 6000);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
