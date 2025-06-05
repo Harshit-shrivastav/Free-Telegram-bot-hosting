@@ -10,10 +10,8 @@ except json.JSONDecodeError:
     print("❌ Error: Invalid JSON in hosts.json")
     exit(1)
 
-# Sort hosts case-insensitively by name
 hosts.sort(key=lambda x: x.get("name", "").lower())
 
-# Counters for platform statuses
 total_count = len(hosts)
 working_count = partial_count = not_working_count = 0
 
@@ -38,16 +36,12 @@ for host in hosts:
         status_emoji = "🔴 Not Working"
         not_working_count += 1
 
-    # Create platform name with link if URL exists
     platform_display = f"[{name}]({url})" if url else name
 
-    # Add row to table
     table_md += f"| {platform_display} | {status_emoji} | {remark} |\n"
 
-# Generate summary badge
 summary_badge = f"🟢 {working_count} | 🟡 {partial_count} | 🔴 {not_working_count} — **Total: {total_count}**"
 
-# Generate README content
 readme = f"""# 🚀 Free Telegram Bot Hosting Platforms
 
 Looking for free Telegram bot hosting? Here's a curated list of platforms with live status checks!
