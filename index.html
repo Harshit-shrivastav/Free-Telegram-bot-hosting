@@ -1,154 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Hosting for Bots</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <style>
-        :root {
-            --primary-color: #FF9EBC;
-            --secondary-color: #A0E7E5;
-            --accent-color: #FFD700;
-            --background: #FFF5F7;
-            --card-bg: #FFFFFF;
-            --text-color: #5A5A5A;
-            --highlight: #FFD1DC;
-            --shadow: 0 6px 12px rgba(255, 158, 188, 0.2);
-            --border-radius: 20px;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Hosting for Bots</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <!--  Google Fonts & Animate.css  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-        body {
-            background-color: var(--background);
-            font-family: 'Comic Neue', cursive;
-            color: var(--text-color);
-            line-height: 1.6;
-        }
+  <!--  Docsify default theme (needed for base layout)  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
 
-        /* Docsify mount point (hidden) */
-        #app {
-            display: none;
-        }
+  <style>
+    /* ----------  brand palette & helpers ---------- */
+    :root {
+      --primary-color:   #ff9ebc;
+      --secondary-color: #a0e7e5;
+      --accent-color:    #ffd700;
+      --background:      #fff5f7;
+      --card-bg:         #ffffff;
+      --text-color:      #5a5a5a;
+      --shadow:          0 6px 12px rgba(255, 158, 188, 0.2);
+      --radius:          20px;
+    }
 
-        /* Main content container */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* Header */
-        header {
-            text-align: center;
-            padding: 2rem 0;
-        }
+    body {
+      background: var(--background);
+      font-family: 'Comic Neue', cursive;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-        h1 {
-            font-family: 'Fredoka One', cursive;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
+    /* ----------  layout wrappers ---------- */
+    header, footer { text-align: center; padding: 2rem 1rem; }
 
-        
-        #main-content {
-            background: var(--card-bg);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: var(--shadow);
-        }
+    header h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--primary-color);
+    }
 
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-color);
-            font-size: 0.9rem;
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
 
-        
-        .github-corner {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80px;
-            height: 80px;
-        }
+    /* ----------  Docsify root ---------- */
+    #app {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+    }
 
-        .github-corner svg {
-            fill: var(--primary-color);
-            color: var(--card-bg);
-        }
+    /* ----------  Docsify sidebar & links ---------- */
+    .sidebar       { background: var(--secondary-color); }
+    .sidebar a     { color: var(--primary-color) !important; }
+    .sidebar-nav li.active > a { font-weight: bold; color: var(--accent-color) !important; }
+    a              { color: var(--primary-color); }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .github-corner {
-                width: 60px;
-                height: 60px;
-            }
-        }
-    </style>
+    /* ----------  GitHub corner ---------- */
+    .github-corner {
+      position: absolute; top: 0; right: 0; width: 80px; height: 80px;
+    }
+    .github-corner svg { fill: var(--primary-color); color: var(--card-bg); }
+
+    @media (max-width: 768px) {
+      .github-corner { width: 60px; height: 60px; }
+    }
+  </style>
 </head>
 <body>
+  <!--  GitHub corner ribbon  -->
+  <a href="https://github.com/Harshit-shrivastav" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
+      <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+      <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+      <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+  </a>
+
+  <!--  Header  -->
+  <header>
+    <h1>Free Telegram&nbsp;Bot&nbsp;Hosting</h1>
+  </header>
+
+  <!--  Docsify mount in a styled container  -->
+  <div class="container">
     <div id="app"></div>
+  </div>
 
-    <a href="https://github.com/Harshit-shrivastav" class="github-corner" aria-label="View source on GitHub">
-        <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
-            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
-        </svg>
-    </a>
+  <!--  Footer  -->
+  <footer>
+    <p>Made&nbsp;with&nbsp;♥ by&nbsp;Harshit&nbsp;Shrivastav</p>
+  </footer>
 
-    <div class="container">
-        <header>
-            <h1>Free Telegram Bot Hosting</h1>
-        </header>
-
-        <div id="main-content"></div>
-
-        <footer>
-            <p>Made with ♥ by Harshit Shrivastav</p>
-        </footer>
-    </div>
-
-    <script>
-        window.$docsify = {
-            name: 'BotBuddies',
-            repo: 'https://github.com/yourusername/your-repo',
-            el: '#main-content',      
-            loadSidebar: false,     
-            subMaxLevel: 2,
-            autoHeader: true,
-            themeColor: '#FF9EBC',
-            search: {
-                paths: 'auto',
-                placeholder: 'Search...',
-                noData: 'No results found!',
-                depth: 3
-            }
-        };
-    </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <!--  Docsify config & scripts  -->
+  <script>
+    window.$docsify = {
+      el: '#app',               // Mount here
+      name: 'BotBuddies',
+      repo: 'https://github.com/Harshit-shrivastav',  // update if you like
+      loadSidebar: false,
+      subMaxLevel: 2,
+      autoHeader: true,
+      homepage: 'README.md',
+      search: {
+        paths: 'auto',
+        placeholder: 'Search...',
+        noData: 'No results!',
+        depth: 3
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
 </body>
 </html>
