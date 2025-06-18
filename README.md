@@ -14,7 +14,7 @@ Looking for free Telegram bot hosting? Here's a curated list of platforms with l
 
 ## 📊 Hosting Status Summary
 
-🟢 3 | 🟡 0 | 🔴 1 — **Total: 4**
+🟢 4 | 🟡 0 | 🔴 1 — **Total: 5**
 
 ---
 
@@ -26,6 +26,7 @@ Looking for free Telegram bot hosting? Here's a curated list of platforms with l
 | [Claw.Cloud](https://ap-southeast-1.run.claw.cloud/signin) | 🟢 Working | $5/month free credits for users with a GitHub account older than 180 days. |
 | [Lade.io](https://lade.io) | 🔴 Not Working | Free tier seems discontinued or inactive |
 | [Serv00](https://serv00.com) | 🟢 Working | Offers shell access; can run Python, Ruby, Perl, Java, TCL/TK, Lua, Erlang, Rust, Go, C, C++, D, R bots using screen or tmux; 3GB ssd, 512MB RAM |
+| [Sevalla](https://sevalla.com) | 🟢 Working | $50 free credit on new signup. |
 
 
 ---
