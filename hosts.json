@@ -22,5 +22,11 @@
     "url": "https://ap-southeast-1.run.claw.cloud/signin",
     "status": "working",
     "remark": "$5/month free credits for users with a GitHub account older than 180 days."
+    },
+    {
+    "name": "Sevalla",
+    "url": "https://sevalla.com",
+    "status": "working",
+    "remark": "$50 free credit on new signup."
     }
 ]
