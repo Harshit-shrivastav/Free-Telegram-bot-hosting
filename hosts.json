@@ -34,5 +34,11 @@
     "url": "https://leapcell.io",
     "status": "working",
     "remark": "3 VCPUs, 4GB Ram, 10000 async tasks, 100000 redis commands."
-    }
+    },
+      {
+    "name": "Bothost",
+    "url": "https://bothost.ru/",
+    "status": "working",
+    "remark": "256 MB RAM, 0.25 CPU, 1 GB Storage, 1 bot in free tier."
+      }
 ]
