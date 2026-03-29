@@ -1,5 +1,11 @@
 [
   {
+    "name": "Tranger Cloud",
+    "url": "https://cloud.tranger.xyz",
+    "status": "working",
+    "remark": "Tranger Cloud lets developers deploy and run bots with just a few clicks making infrastructure invisible. You can start instantly for free."
+  },
+  {
     "name": "Serv00",
     "url": "https://serv00.com",
     "status": "working",
