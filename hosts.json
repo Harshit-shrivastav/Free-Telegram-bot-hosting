@@ -1,4 +1,10 @@
 [
+    {
+    "name": "Pella",
+    "url": "https://www.pella.app/",
+    "status": "working",
+    "remark": "0.1 CPU, 100 MB RAM, 5GB DISK, UNMETERED BANDWIDTH"
+  },
   {
     "name": "Tranger Cloud",
     "url": "https://cloud.tranger.xyz",
