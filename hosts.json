@@ -1,4 +1,10 @@
 [
+        {
+    "name": "Just Run My App",
+    "url": "https://justrunmy.app/",
+    "status": "working",
+    "remark": "0.25 GB RAM, 0.15 vCPU, 0.3 GB Disk,1 app"
+  },
     {
     "name": "Pella",
     "url": "https://www.pella.app/",
