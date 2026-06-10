@@ -14,7 +14,7 @@ Looking for free Telegram bot hosting? Here's a curated list of platforms with l
 
 ## 📊 Hosting Status Summary
 
-🟢 7 | 🟡 0 | 🔴 2 — **Total: 9**
+🟢 8 | 🟡 0 | 🔴 2 — **Total: 10**
 
 ---
 
@@ -28,6 +28,7 @@ Looking for free Telegram bot hosting? Here's a curated list of platforms with l
 | [Claw.Cloud](https://ap-southeast-1.run.claw.cloud/signin) | 🟢 Working | $5/month free credits for users with a GitHub account older than 180 days. |
 | [Lade.io](https://lade.io) | 🔴 Not Working | Free tier seems discontinued or inactive |
 | [Leapcell](https://leapcell.io) | 🟢 Working | 3 VCPUs, 4GB Ram, 10000 async tasks, 100000 redis commands. |
+| [Pella](https://www.pella.app/) | 🟢 Working | 0.1 CPU, 100 MB RAM, 5GB DISK, UNMETERED BANDWIDTH |
 | [Serv00](https://serv00.com) | 🟢 Working | Offers shell access; can run Python, Ruby, Perl, Java, TCL/TK, Lua, Erlang, Rust, Go, C, C++, D, R bots using screen or tmux; 3GB ssd, 512MB RAM |
 | [Sevalla](https://sevalla.com) | 🔴 Not Working | $50 free credit on new signup. |
 | [Tranger Cloud](https://cloud.tranger.xyz) | 🟢 Working | Tranger Cloud lets developers deploy and run bots with just a few clicks making infrastructure invisible. You can start instantly for free. |
