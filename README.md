@@ -14,7 +14,7 @@ Looking for free Telegram bot hosting? Here's a curated list of platforms with l
 
 ## 📊 Hosting Status Summary
 
-🟢 8 | 🟡 0 | 🔴 2 — **Total: 10**
+🟢 9 | 🟡 0 | 🔴 2 — **Total: 11**
 
 ---
 
@@ -26,6 +26,7 @@ Looking for free Telegram bot hosting? Here's a curated list of platforms with l
 | [Apply.build](https://apply.build/) | 🟢 Working | 512 MB RAM, 0.5 CPU. |
 | [Bothost](https://bothost.ru/) | 🟢 Working | 256 MB RAM, 0.25 CPU, 1 GB Storage, 1 bot in free tier. |
 | [Claw.Cloud](https://ap-southeast-1.run.claw.cloud/signin) | 🟢 Working | $5/month free credits for users with a GitHub account older than 180 days. |
+| [Just Run My App](https://justrunmy.app/) | 🟢 Working | 0.25 GB RAM, 0.15 vCPU, 0.3 GB Disk,1 app |
 | [Lade.io](https://lade.io) | 🔴 Not Working | Free tier seems discontinued or inactive |
 | [Leapcell](https://leapcell.io) | 🟢 Working | 3 VCPUs, 4GB Ram, 10000 async tasks, 100000 redis commands. |
 | [Pella](https://www.pella.app/) | 🟢 Working | 0.1 CPU, 100 MB RAM, 5GB DISK, UNMETERED BANDWIDTH |
