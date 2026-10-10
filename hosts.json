@@ -1,4 +1,10 @@
 [
+                {
+    "name": "Botkeep",
+    "url": "https://botkeep.cloud/",
+    "status": "working",
+    "remark": "2 GB RAM, 2 vCPU, 2 GB Disk,4 app"
+  },
         {
     "name": "Just Run My App",
     "url": "https://justrunmy.app/",
