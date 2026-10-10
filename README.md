@@ -63,8 +63,6 @@ Stay connected for more such open-source utilities & updates!
 ## 📬 Contact Me
 
 Got suggestions, improvements, or just want to chat?
-
-- 💬 **Telegram:** [@IzHarshit](https://telegram.me/izharshit)  
 - 📧 **Email:** i@h-s.site
 
 ---
