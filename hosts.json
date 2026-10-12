@@ -44,7 +44,7 @@
     {
     "name": "Claw.Cloud",
     "url": "https://ap-southeast-1.run.claw.cloud/signin",
-    "status": "working",
+    "status": "not_working",
     "remark": "$5/month free credits for users with a GitHub account older than 180 days."
     },
     {
