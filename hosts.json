@@ -70,5 +70,11 @@
     "url": "https://apply.build/",
     "status": "working",
     "remark": "512 MB RAM, 0.5 CPU."
-      }
+      },
+  {
+    "name": "FadeHost",
+    "url": "https://fadehost.com/telegram-bot-hosting/",
+    "status": "working",
+    "remark": "1 free bot, 256 MB RAM, 1 GB traffic a day, deploys from GitHub, Python or Node, no card needed."
+  }
 ]
