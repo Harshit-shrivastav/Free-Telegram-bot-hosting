@@ -14,7 +14,7 @@ Looking for free Telegram bot hosting? Here's a curated list of platforms with l
 
 ## 📊 Hosting Status Summary
 
-🟢 10 | 🟡 0 | 🔴 2 — **Total: 12**
+🟢 11 | 🟡 0 | 🔴 2 — **Total: 13**
 
 ---
 
@@ -27,6 +27,7 @@ Looking for free Telegram bot hosting? Here's a curated list of platforms with l
 | [Bothost](https://bothost.ru/) | 🟢 Working | 256 MB RAM, 0.25 CPU, 1 GB Storage, 1 bot in free tier. |
 | [Botkeep](https://botkeep.cloud/) | 🟢 Working | 2 GB RAM, 2 vCPU, 2 GB Disk,4 app |
 | [Claw.Cloud](https://ap-southeast-1.run.claw.cloud/signin) | 🟢 Working | $5/month free credits for users with a GitHub account older than 180 days. |
+| [FadeHost](https://fadehost.com/telegram-bot-hosting/) | 🟢 Working | 1 free bot, 256 MB RAM, 1 GB traffic a day, deploys from GitHub, Python or Node, no card needed. |
 | [Just Run My App](https://justrunmy.app/) | 🟢 Working | 0.25 GB RAM, 0.15 vCPU, 0.3 GB Disk,1 app |
 | [Lade.io](https://lade.io) | 🔴 Not Working | Free tier seems discontinued or inactive |
 | [Leapcell](https://leapcell.io) | 🟢 Working | 3 VCPUs, 4GB Ram, 10000 async tasks, 100000 redis commands. |
@@ -63,6 +64,8 @@ Stay connected for more such open-source utilities & updates!
 ## 📬 Contact Me
 
 Got suggestions, improvements, or just want to chat?
+
+- 💬 **Telegram:** [@IzHarshit](https://telegram.me/izharshit)  
 - 📧 **Email:** i@h-s.site
 
 ---
