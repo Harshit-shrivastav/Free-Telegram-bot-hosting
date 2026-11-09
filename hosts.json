@@ -1,4 +1,10 @@
 [
+  {
+    "name": "Bot-Hosting.net",
+    "url": "https://bot-hosting.net/telegram-bot-hosting",
+    "status": "working",
+    "remark": "256 MB RAM, 25% CPU, 512 MB storage, 1 deployment, no card. Node.js, Python, Java; webhooks on a free HTTPS subdomain; MySQL, PostgreSQL, MongoDB, Redis available. Manual renewal every 4 days."
+  },
                 {
     "name": "Botkeep",
     "url": "https://botkeep.cloud/",
